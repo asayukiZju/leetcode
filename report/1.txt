@@ -1,0 +1,25 @@
+1.Two Sum
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+这题也就是说 在给定的数组和target的情况下 找到两个数 它们的和为target
+
+算法思路
+O(n^2) 自然可以通过遍历打表做
+
+但是 也可以利用hash表的性质，来完成一个看起来像是O(n) 其实算上hash内部的查找消耗可能是在O(n)~O(nlogn)之间时间复杂度的算法
+
+这里 我选取的语言是 js
+通过 js 的 object 可以轻松的构造出hash表
+从而完成解题
+若和为x 数组中的数为Ai
+key 为 x-Ai value 为 Ai
+每次通过搜索 键值 x-Ai 是否存在 来判断是否得到解
+若未得到解 则 写入 这组hashmap
