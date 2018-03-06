@@ -1,0 +1,15 @@
+2. Add Two Numbers
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Example
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+Explanation: 342 + 465 = 807.
+
+这题是对两个用链表表示的十进制数的求和
+
+所以思路很简单，就是顺序读过去，再设置一个变量作为进位寄存器
+非常自然的就可以求得答案链表

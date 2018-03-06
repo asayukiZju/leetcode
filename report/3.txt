@@ -1,0 +1,18 @@
+3. Longest Substring Without Repeating Characters
+Given a string, find the length of the longest substring without repeating characters.
+
+Examples:
+
+Given "abcabcbb", the answer is "abc", which the length is 3.
+
+Given "bbbbb", the answer is "b", with the length of 1.
+
+Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+最长不含重复字母的子字符串
+这题的返回值要求是数值
+即最长不含重复字母的子字符串的长度
+因此只需要顺序遍历字符串，当出现重复字母时重置这个进度重新计数即可
+
+而这里用了一个小技巧
+构建了一个数组 数组里面存放的是 下标对应字母 在当前被统计的字串中出现的位置 这样子 就可以方便的 在改字母重复出现时，将子字符串的起点 初始化到该字母上次出现位置的右侧，并且重新开始计数。
